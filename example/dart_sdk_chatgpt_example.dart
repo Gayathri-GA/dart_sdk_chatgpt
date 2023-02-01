@@ -1,6 +1,5 @@
-import 'package:dart_sdk_chatgpt/dart_sdk_chatgpt.dart';
+// Example file to showcase the usage of ChatGPT API
 
-void main() {
-  var awesome = Awesome();
-  print('awesome: ${awesome.isAwesome}');
-}
+// import 'package:dart_sdk_chatgpt/dart_sdk_chatgpt.dart';
+
+void main() {}

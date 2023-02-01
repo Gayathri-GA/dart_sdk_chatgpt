@@ -1,8 +1,7 @@
-/// Support for doing something awesome.
-///
-/// More dartdocs go here.
+/// ChatGPTAPI which provides an API wrapper around OpenAI’s text completion API using the ChatGPT model using dart.
+
 library dart_sdk_chatgpt;
 
-export 'src/dart_sdk_chatgpt_base.dart';
+export 'src/chatgpt_api.dart';
 
 // TODO: Export any libraries intended for clients of this package.
