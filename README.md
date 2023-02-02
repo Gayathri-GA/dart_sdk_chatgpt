@@ -25,7 +25,7 @@ api.generateResponse(prompt, length: length).then((text) => print(text));
 The package uses the HTTP post method to make a request to the OpenAI API with the provided prompt and length (as max_tokens). The API key is passes using apiKey parameter in the ChatGptApi function.
 
 ## Requirements
-* A valid API key for the OpenAI GPT-3 API.
+* A valid API key for the OpenAI Chat gpt api.
   
 ## Note
 Pass API Key in the [apiKey] parameter of [ChatGptApi].
