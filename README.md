@@ -1,17 +1,31 @@
-## Dart-SDK for Chat GPT
+## Dart ChatGPT API
+A Dart package provides an API wrapper around OpenAI’s text completion API using the ChatGPT model using dart.
 
-<b>ChatGPTAPI</b> which provides an API wrapper around OpenAI’s text completion API using the ChatGPT model using dart.
+## Features
+* Generate text with a provided prompt.
+* Customizable text length with length parameter (default: 1000).
 
-## Development: TODO
+## Usage
 
-To use ChatGPT, you will need an OpenAI API key. You can apply for one on the OpenAI website. Once you have the API key, you can start making requests to the ChatGPT API.
+### Import the package:
 
-The link to sign up for an OpenAI API key is [https://beta.openai.com/signup/](https://beta.openai.com/signup/)
+```dart
+import 'package:chatgpt_api/chatgpt_api.dart';
+```
+### Generate text:
 
-- [ ] Sign up for an OpenAI API key to access the API endpoint for ChatGPT model.( Yet to be launched so joined waitlist will use leaked api model for testing purpose ).
-- [ ] Create Dart code that calls the API endpoint, passing it text to be generated, and returning the generated text.
-- [ ] Package the code as a Dart library, following the guidelines for creating Dart packages.
-- [ ] Publish the package to the pub.dev package repository.
+```dart
+final api = ChatGptApi(apiKey: '');
+String prompt = 'Things to consider for effective article publication';
+int length = 500;
+api.generateResponse(prompt, length: length).then((text) => print(text));
+```
+## Implementation details
 
-[Link for documentation on case study of developing this package.](https://docs.google.com/document/d/1Q9dX0PLiJ-4SaPEfcH7iwIxYhuxx_BTW0A1H6shrOnQ/edit?usp=sharing)
+The package uses the HTTP post method to make a request to the OpenAI API with the provided prompt and length (as max_tokens). The API key is passes using apiKey parameter in the ChatGptApi function.
 
+## Requirements
+* A valid API key for the OpenAI GPT-3 API.
+  
+## Note
+Pass API Key in the [apiKey] parameter of [ChatGptApi].
