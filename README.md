@@ -3,7 +3,14 @@ A Dart package provides an API wrapper around OpenAI’s text completion API usi
 
 ## Features
 * Generate text with a provided prompt.
-* Customizable text length with length parameter (default: 1000).
+* Customizable text length with length parameter.
+
+## Requirements
+* A valid API key for the OpenAI Chat gpt api. Get your API Key [here](https://platform.openai.com/account/api-keys).
+  
+## Implementation details
+
+The package uses the HTTP post method to make a request to the OpenAI API with the provided prompt and length (as max_tokens). The API key is passed using apiKey parameter in the ChatGptApi function.
 
 ## Usage
 
@@ -12,20 +19,15 @@ A Dart package provides an API wrapper around OpenAI’s text completion API usi
 ```dart
 import 'package:chatgpt_api/chatgpt_api.dart';
 ```
-### Generate text:
+### Generate text function
 
 ```dart
-final api = ChatGptApi(apiKey: '');
-String prompt = 'Things to consider for effective article publication';
+final api = ChatGptApi();
+String apiKey = 'YOUR_API_KEY'; // Copy and paste your api key here.
+String prompt = 'Say some facts on flutter framework';
 int length = 500;
-api.generateResponse(prompt, length: length).then((text) => print(text));
+String generatedResponse = api.generateResponse(prompt, length, apiKey);
+print(generatedResponse);
 ```
-## Implementation details
 
-The package uses the HTTP post method to make a request to the OpenAI API with the provided prompt and length (as max_tokens). The API key is passes using apiKey parameter in the ChatGptApi function.
-
-## Requirements
-* A valid API key for the OpenAI Chat gpt api.
   
-## Note
-Pass API Key in the [apiKey] parameter of [ChatGptApi].

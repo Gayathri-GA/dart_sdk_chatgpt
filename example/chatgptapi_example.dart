@@ -4,7 +4,7 @@ import 'package:chatgptapi/chatgptapi.dart';
 
 void main() async {
   final api = ChatGptApi();
-  String apiKey = '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';
+  String apiKey = 'YOUR_API_KEY';
   String prompt = 'Say some facts on flutter framework';
   int length = 500;
 
