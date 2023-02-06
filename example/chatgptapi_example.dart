@@ -3,13 +3,14 @@
 import 'package:chatgptapi/chatgptapi.dart';
 
 void main() async {
-  final api = ChatGptApi(apiKey: '');
-  String prompt = 'Things to consider for effective article publication';
+  final api = ChatGptApi();
+  String apiKey = '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';
+  String prompt = 'Say some facts on flutter framework';
   int length = 500;
 
   try {
     String generatedResponse =
-        await api.generateResponse(prompt, length: length);
+        await api.generateResponse(prompt, length, apiKey);
     print(generatedResponse);
   } catch (e) {
     print(e);
