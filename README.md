@@ -10,7 +10,7 @@ A Dart package provides an API wrapper around OpenAI’s text completion API usi
   
 ## Implementation details
 
-The package uses the HTTP post method to make a request to the OpenAI API with the provided prompt and length (as max_tokens). The API key is passed using apiKey parameter in the ChatGptApi function.
+The package uses the HTTP post method to make a request to the OpenAI API with the provided prompt and length (as max_tokens). The API key is passed using apiKey parameter in the generate response function.
 
 ## Usage
 
@@ -29,5 +29,3 @@ int length = 500;
 String generatedResponse = api.generateResponse(prompt, length, apiKey);
 print(generatedResponse);
 ```
-
-  
